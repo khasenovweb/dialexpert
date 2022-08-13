@@ -1,0 +1,136 @@
+.calc {
+    margin-top: 140rem;
+}
+
+.calc__main {
+    margin-top: 60rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: -50rem;
+    margin-right: -50rem;
+}
+
+.calc__left {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+    padding: 50rem;
+}
+
+.calc__left__title {
+    font-weight: 400;
+    font-size: 26rem;
+}
+
+.calc__left__group {
+    margin-top: 40rem;
+}
+
+.calc__left__group__label {
+    font-weight: 300;
+    font-size: 18rem;
+    margin-bottom: 20rem;
+}
+
+.calc__left__group__inputs {
+    display: flex;
+    align-items: center;
+    .ckeckbox {
+        width: 150rem;
+        margin-right: 20rem;
+    }
+}
+
+.calc__left__group__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24rem;
+}
+
+.calc__right {
+    padding-left: 66rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 30rem;
+}
+
+.calc__right__price {
+    font-weight: 400;
+    font-size: 53rem;
+    color: @main;
+}
+
+.calc__right__form {
+    margin-top: 20rem;
+}
+
+.calc__right__form__title {
+    font-weight: 400;
+    font-size: 26rem;
+}
+
+.calc__right__form__desc {
+    font-weight: 300;
+    font-size: 18rem;
+    margin-top: 15rem;
+}
+
+.calc__right__form {
+    form {
+        margin-top: 40rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto-fill, minmax(max-content, 0));
+        justify-items: start;
+        grid-gap: 20rem;
+        .btn {
+            width: 200rem;
+        }
+        .formpolitics {
+            margin-top: 10rem;
+            margin-bottom: 10rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .calc {
+        margin-top: 50rem;
+    }
+    .calc__main {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 40rem;
+    }
+    .calc__right {
+        padding-left: 0;
+    }
+    .calc__left {
+        box-shadow: none;
+        padding: 0;
+    }
+    .calc__left__group__wrapper {
+        grid-template-columns: 1fr;
+    }
+    .calc__left__title {
+        font-size: 18rem;
+    }
+    .calc__left__group__label {
+        font-size: 16rem;
+        margin-bottom: 15rem;
+    }
+    .calc__left__group {
+        margin-top: 20rem;
+    }
+    .calc__right__price {
+        font-size: 36rem;
+    }
+    .calc__right__form__title {
+        font-size: 18rem;
+    }
+    .calc__right__form__desc {
+        font-size: 16rem;
+    }
+}
