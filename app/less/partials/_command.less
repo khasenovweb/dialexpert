@@ -1,0 +1,70 @@
+.command {
+    margin-top: 100rem;
+}
+
+.command__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25rem;
+    margin-top: 80rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
+}
+
+.command__item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+}
+
+.command__item__img {
+    width: 100%;
+    padding-bottom: 115%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.command__item__text {
+    padding: 25rem 50rem;
+    .btn {
+        font-size: 16rem;
+        padding: 10rem 20rem;
+        margin-top: 27rem;
+    }
+}
+
+.command__item__fio {
+    font-weight: 400;
+    font-size: 26rem;
+    line-height: 133%;
+}
+
+.command__item__role {
+    margin-top: 15rem;
+    font-weight: 300;
+    font-size: 18rem;
+    line-height: 133%;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .command__items {
+        margin-left: 0;
+        margin-right: 0;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50rem;
+    }
+    .sec__list {
+        align-items: flex-start;
+    }
+    .command__item__text {
+        padding: 30rem;
+    }
+    .command__item__fio {
+        font-size: 18rem;
+    }
+    .command__item__role {
+        font-size: 16rem;
+    }
+}

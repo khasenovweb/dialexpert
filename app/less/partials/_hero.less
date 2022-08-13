@@ -1,0 +1,112 @@
+.hero {
+
+}
+
+.hero__title {
+    font-weight: 400;
+    font-size: 53rem;
+}
+
+.hero__text {
+    width: 668rem;
+    background: #FFFFFF;
+    box-shadow: -41rem 4rem 100rem rgba(0, 0, 0, 0.05);
+    padding: 50rem;
+    z-index: 2;
+    position: relative;
+}
+
+.hero__desc {
+    font-weight: 300;
+    font-size: 26rem;
+    margin-top: 30rem;
+}
+
+.hero__content {
+    margin-left: -50rem;
+    margin-right: -50rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 592rem;
+}
+
+.hero__btnblock {
+    margin-top: 40rem;
+    display: flex;
+    align-items: center;
+}
+.hero__btnblock__mobile {
+    margin-top: 40rem;
+    display: flex;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    margin-top: 24rem;
+}
+
+.hero__btnblock__label {
+    font-weight: 300;
+    font-size: 18rem;
+    margin-left: 34rem;
+}
+
+.hero__img {
+    height: 592rem;
+    width: 787rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .hero {
+        padding-top: 40px;
+    }
+    .hero__content {
+        height: auto;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .hero__img {
+        position: static;
+        width: 100%;
+    }
+    .hero__text {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+    .hero__title {
+        text-align: center;
+        font-size: 30rem;
+    }
+    .hero__desc {
+        text-align: center;
+        font-size: 18rem;
+        margin-top: 20rem;
+    }
+    .hero__btnblock {
+        display: none;
+    }
+    .hero__btnblock__mobile {
+        display: flex;
+    }
+    .hero__btnblock__label {
+        margin-top: 18rem;
+        margin-left: 0;
+        font-size: 16rem;
+    }
+    .hero__img {
+        height: auto;
+        padding-bottom: 75%;
+        margin-top: 20rem;
+    }
+}

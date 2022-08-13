@@ -49,6 +49,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    img {
+        height: 19rem;
+    }
 }
 
 .header__whatsapp {
@@ -64,6 +67,9 @@
     align-items: center;
     justify-content: center;
     margin-right: 15rem;
+    img {
+        height: 20rem;
+    }
 }
 
 
@@ -78,6 +84,18 @@
     align-items: center;
 }
 
+.header__hamburger {
+    width: 40rem;
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    display: none;
+}
+
+.header__hamburger {
+    margin-right: -10rem;
+}
 
 @media screen and (max-width: 1250px) {
     
@@ -87,23 +105,37 @@
     
 }
 
-
-@media screen and (max-width: 950px) {
-    .header__whatsapp__text {
-        display: none;
-    }
-}
-@media screen and (max-width: 850px) {
-    .header__phone__value {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 750px) {
+    .header__hamburger {
+        display: block;
+    }
     .header__phone__value {
+        display: none;
+    }
+    .header__whatsapp__text {
         display: none;
     }
     .header__navbar {
         display: none;
+    }
+    .header__content {
+        height: 60rem;
+    }
+    .header__logo img {
+        height: 25rem;
+        min-height: 25rem;
+    }
+    .header__content {
+        justify-content: flex-start;
+    }
+    .header__contacts {
+        margin-left: auto;
+        margin-right: 20rem;
+    }
+    .header__phone__icon {
+        margin-right: 0;
+    }
+    .header__whatsapp__icon {
+        margin-right: 0;
     }
 }
