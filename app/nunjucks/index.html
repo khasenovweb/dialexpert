@@ -14,13 +14,13 @@
                 </h1>
                 <p class="hero__desc">Спасаем от убытков с 2016 года</p>
                 <div class="hero__btnblock">
-                    <button class="btn">Как сократить налоги?</button>
+                    <button class="btn" data-modal-show="1">Как сократить налоги?</button>
                     <div class="hero__btnblock__label">Всего 3 вопроса</div>
                 </div>
             </div>
             <div class="hero__img" style="background-image: url(img/hero_bg.jpeg);"></div>
             <div class="hero__btnblock__mobile">
-                <button class="btn">Как сократить налоги?</button>
+                <button class="btn" data-modal-show="1">Как сократить налоги?</button>
                 <div class="hero__btnblock__label">Всего 3 вопроса</div>
             </div>
         </div>
@@ -33,7 +33,7 @@
 <!-- -------------------------------------------------- -->
 <!-- ----------------- services ----------------------- -->
 <!-- -------------------------------------------------- -->
-<section class="services">
+<section class="services" id="services">
     <div class="container">
         <div class="services__cotent">
             <h2 class="sec__title center">Помогаем безопасно зарабатывать деньги</h2>
@@ -64,7 +64,7 @@
 <!-- -------------------------------------------------- -->
 <!-- ------------------ command ----------------------- -->
 <!-- -------------------------------------------------- -->
-<section class="command">
+<section class="command" id="command">
     <div class="container">
         <div class="command__content">
             <h2 class="sec__title center">Чем именно мы можем быть полезны?</h2>
@@ -209,7 +209,7 @@
 <!-- ------------------------------------------------------- -->
 <!-- ----------------------- calc -------------------------- -->
 <!-- ------------------------------------------------------- -->
-<section class="calc">
+<section class="calc" id="calc">
     <div class="container">
         <div class="calc__content">
             <h2 class="sec__title center">Калькулятор бухгалтерских услуг</h2>
@@ -347,11 +347,21 @@
 <!-- ------------------------------------------------------- -->
 <!-- -------------------- reviews -------------------------- -->
 <!-- ------------------------------------------------------- -->
-<section class="reviews">
+<section class="reviews" id="reviews">
     <div class="container">
         <div class="reviews__content">
             <h2 class="sec__title center">Отзывы</h2>
             <p class="sec__desc center">о работе нашей компании</p>
+            <div class="reviews__items">
+                <div class="reviews__flamp">
+                    <a class="flamp-widget" href="//chelyabinsk.flamp.ru/firm/dialog_ehkspert_ooo_yuridicheskaya_kompaniya-70000001021741868"  data-flamp-widget-type="responsive-new" data-flamp-widget-id="70000001021741868" data-flamp-widget-width="100%" data-flamp-widget-count="2">Отзывы о нас на Флампе</a>
+                    <script>!function(d,s){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);js.async=1;js.src="//widget.flamp.ru/loader.js";fjs.parentNode.insertBefore(js,fjs);}(document,"script");</script>
+                </div>
+                <div class="reviews__yandex">
+                    <iframe src="https://yandex.ru/maps-reviews-widget/227041558441?comments"></iframe>
+                    <!-- <a href="https://yandex.ru/maps/org/dialog_ekspert/227041558441/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0" rel="noopener">Диалог Эксперт на карте Челябинска — Яндекс.Карты</a> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -367,11 +377,40 @@
         <div class="preims__content">
             <h2 class="sec__title center">Преимущества</h2>
             <p class="sec__desc center">при работе с нами</p>
+            <div class="preims__items">
+                <div class="preims__item">
+                    <img src="img/preims_1.svg" alt="" class="preims__item__icon">
+                    <div class="preims__item__title">Доступ к базе 1С 24 часа</div>
+                </div>
+                <div class="preims__item">
+                    <img src="img/preims_2.svg" alt="" class="preims__item__icon">
+                    <div class="preims__item__title">Материальная ответственность за ведение бухгалтерии вашей компании</div>
+                </div>
+                <div class="preims__item">
+                    <img src="img/preims_3.svg" alt="" class="preims__item__icon">
+                    <div class="preims__item__title">Ставим задачи исходя из цели бизнеса минимум с минимумом рисков</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <!-- ------------------------------------------------------- -->
 <!-- ----------------- END preims -------------------------- -->
+<!-- ------------------------------------------------------- -->
+
+<!-- ------------------------------------------------------- -->
+<!-- ------------------- contacts -------------------------- -->
+<!-- ------------------------------------------------------- -->
+<section class="contacts">
+    <div class="container">
+        <div class="contacts__content">
+            <a href="" class="contacts__phonebtn">+7 351 217 02 12</a>
+            <div class="contacts__content__desc">Позвоните, мы на связи!</div>
+        </div>
+    </div>
+</section>
+<!-- ------------------------------------------------------- -->
+<!-- --------------- END contacts -------------------------- -->
 <!-- ------------------------------------------------------- -->
 
 {% endblock %}

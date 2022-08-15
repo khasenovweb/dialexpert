@@ -18,10 +18,10 @@
 					<img src="img/logo.svg" alt="">				
 				</a>
 				<ul class="header__navbar">
-					<li><a href="">Услуги</a></li>
-					<li><a href="">Бухгалтеры</a></li>
-					<li><a href="">Цены</a></li>
-					<li><a href="">Отзывы</a></li>
+					<li><a href="#services" data-scroll>Услуги</a></li>
+					<li><a href="#command" data-scroll>Бухгалтеры</a></li>
+					<li><a href="#calc" data-scroll>Цены</a></li>
+					<li><a href="#reviews" data-scroll>Отзывы</a></li>
 				</ul>
 				<div class="header__contacts">
 					<a href="tel:+7 (351) 217-02-12" class="header__phone">
@@ -41,7 +41,7 @@
 						</div>
 					</a>
 				</div>
-				<div class="header__hamburger" style="background-image: url(img/hamburger.svg)"></div>
+				<div data-hamburger class="header__hamburger" style="background-image: url(img/hamburger.svg)"></div>
 			</div>
 		</div>
 	</section>
@@ -51,6 +51,144 @@
 	{% block content %}
 		
 	{% endblock %}
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__top">
+				<a href="" class="footer__top__logo">
+					<img src="img/logo.svg" alt="">
+				</a>
+				<ul class="footer__top__links">
+					<li><a href="#services" data-scroll>Услуги</a></li>
+					<li><a href="#command" data-scroll>Бухгалтеры</a></li>
+					<li><a href="#calc" data-scroll>Цены</a></li>
+					<li><a href="#reviews" data-scroll>Отзывы</a></li>
+				</ul>
+				<div class="footer__top__socials">
+					<a href="">
+						<img src="img/whatsapp.svg" alt="">
+					</a>
+					<a href="">
+						<img src="img/telegram.svg" alt="">
+					</a>
+					<a href="">
+						<img src="img/viber.svg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="footer__bottom">
+				<div class="footer__bottom__copyright">© 2016-2022 ООО «Диалог Эксперт» Бухгалтерские услуги в Челябинске</div>
+				<a href="" class="footer__bottom__politics">Политика конфиденциальности</a>
+			</div>
+		</div>
+	</footer>
+	<!-- -------------------------------------------------- -->
+	<!-- ------------------- header ----------------------- -->
+	<!-- -------------------------------------------------- -->
+	<section class="mobilenav" data-mobilnav>
+		<ul class="mobilenav__links">
+			<li><a href="#services" data-scroll>Услуги</a></li>
+			<li><a href="#command" data-scroll>Бухгалтеры</a></li>
+			<li><a href="#calc" data-scroll>Цены</a></li>
+			<li><a href="#reviews" data-scroll>Отзывы</a></li>
+		</ul>
+		<a href="tel:+7 (351) 217-02-12" class="mobilenav__phone">
+			<img src="img/phone.svg" alt="" class="mobilenav__phone__icon">
+			<div class="mobilenav__phone__value">+7 (351) 217-02-12</div>
+		</a>
+		<div class="footer__top__socials">
+			<a href="">
+				<img src="img/whatsapp.svg" alt="">
+			</a>
+			<a href="">
+				<img src="img/telegram.svg" alt="">
+			</a>
+			<a href="">
+				<img src="img/viber.svg" alt="">
+			</a>
+		</div>
+	</section>
+	<!-- -------------------------------------------------- -->
+	<!-- --------------- END header ----------------------- -->
+	<!-- -------------------------------------------------- -->
+
+	<!-- -------------------------------------------------- -->
+	<!-- ------------------- modals ----------------------- -->
+	<!-- -------------------------------------------------- -->
+	<section class="modal__wrapper" data-modal="1">
+		<div class="modal">
+			<svg data-modal-close="1" class="modal__close" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M29.0604 8.94022C29.3696 9.24938 29.3696 9.75064 29.0604 10.0598L10.0604 29.0598C9.75128 29.369 9.25002 29.369 8.94086 29.0598C8.63169 28.7506 8.63169 28.2494 8.94086 27.9402L27.9409 8.94022C28.25 8.63105 28.7513 8.63105 29.0604 8.94022Z" fill="#D9D9D9"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M8.93955 8.94022C8.63039 9.24938 8.63039 9.75064 8.93955 10.0598L27.9396 29.0598C28.2487 29.369 28.75 29.369 29.0591 29.0598C29.3683 28.7506 29.3683 28.2494 29.0591 27.9402L10.0591 8.94022C9.74998 8.63105 9.24872 8.63105 8.93955 8.94022Z" fill="#D9D9D9"/>
+			</svg>
+			<div class="modal__title">Как сократить налоги?</div>
+			<form action="" class="modal__form">
+				<div class="calc__left__group__wrapper">
+					<div class="calc__left__group">
+						<div class="calc__left__group__label">Организационно правовая форма</div>
+						<div class="select__wrapper">
+							<svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
+							</svg>
+							<select class="select" name="" id="">
+								<option value="">ООО</option>
+								<option value="">ИП</option>
+							</select>
+						</div>
+					</div>
+					<div class="calc__left__group">
+						<div class="calc__left__group__label">Система налогооблаженпя</div>
+						<div class="select__wrapper">
+							<svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
+							</svg>
+							<select class="select" name="" id="">
+								<option value="">ОСН</option>
+								<option value="">УСН</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="calc__left__group">
+					<div class="calc__left__group__label">Организационно правовая форма</div>
+					<div class="select__wrapper">
+						<svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
+						</svg>
+						<select class="select" name="" id="">
+							<option value="">1-10</option>
+						</select>
+					</div>
+				</div>
+				<div class="calc__left__group__wrapper">
+					<div class="calc__left__group">
+						<div class="calc__left__group__label">Имя</div>
+						<input type="text" placeholder="Ваше имя">
+					</div>
+					<div class="calc__left__group">
+						<div class="calc__left__group__label">Телефон</div>
+						<input type="tel" placeholder="+7 (___) ___-__-__">
+					</div>
+				</div>
+				<div class="formpolitics">
+					<label for="politics_2" class="formpolitics__checkbox">
+						<input type="checkbox" id="politics_2" checked>
+						<div class="formpolitics__checkbox__box">
+							<svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.731 0.161162C11.0445 0.410474 11.0907 0.859602 10.8342 1.16432L4.67942 8.47703C4.18174 9.06834 3.29304 9.1732 2.66429 8.7148L0.293375 6.9862C-0.0306304 6.74998 -0.0962949 6.30314 0.146709 5.98818C0.389713 5.67321 0.849364 5.60938 1.17337 5.8456L3.54429 7.57419L9.69908 0.261477C9.95555 -0.0432376 10.4176 -0.0881505 10.731 0.161162Z" fill="white"/>
+							</svg>
+						</div>
+					</label>
+					<div class="formpolitics__text">
+						Я принимаю условия <a href="">пользовательского соглашения</a>
+					</div>
+				</div>
+				<button class="btn">Отправить</button>
+			</form>
+		</div>
+	</section>
+	<!-- -------------------------------------------------- -->
+	<!-- --------------- END modals ----------------------- -->
+	<!-- -------------------------------------------------- -->
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/main.js"></script>
 </body>

@@ -1,3 +1,45 @@
 .preims {
     margin-top: 100rem;
 }
+
+.preims__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24rem;
+    margin-left: -50rem;
+    margin-right: -50rem;
+    margin-top: 80rem;
+}
+
+.preims__item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
+    padding: 50rem;
+    
+}
+
+.preims__item__icon {
+    height: 60rem;
+}
+
+.preims__item__title {
+    margin-top: 20rem;
+    font-weight: 300;
+    font-size: 22rem;
+}
+
+
+@media screen and (max-width: 750px) {
+    .preims__items {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 30rem;
+    }
+    .preims__item {
+        padding: 40rem;
+    }
+    .preims__item__title {
+        font-size: 18rem;
+    }
+}

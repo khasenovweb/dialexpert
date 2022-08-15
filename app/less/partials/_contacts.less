@@ -1,0 +1,39 @@
+.contacts {
+    margin-top: 100rem;
+}
+
+.contacts__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacts__phonebtn {
+    font-weight: 400;
+    font-size: 53rem;
+    text-decoration: none;
+    color: white;
+    background-color: @main;
+    padding: 15rem 30rem;
+    border-radius: 10rem;
+}
+
+.contacts__content__desc {
+    text-align: center;
+    margin-top: 20rem;
+    font-weight: 300;
+    font-size: 26rem;
+}
+
+
+@media screen and (max-width: 750px) {
+    .contacts__phonebtn {
+        font-size: 36rem;
+    }
+    .contacts__content__desc {
+        font-size: 18rem;
+    }
+    .contacts {
+        margin-top: 50rem;
+    }
+}
