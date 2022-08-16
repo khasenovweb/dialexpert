@@ -13,6 +13,14 @@
 // ==============================//
 // =========== Libs ===============//
 // ==============================//
+
+// =================================//
+// ============= Partials ==========//
+// =================================//
+@@include('partials/calc.js')
+// ===============================//
+// ========= END Partials ========//
+// ===============================//
  
 $(document).ready(function(){
     var header = new Headhesive(".header", {
@@ -75,4 +83,16 @@ $(document).ready(function(){
         $('body').css('padding-right', '0');
         $('body').removeClass('body_hidden')
     });
+
+
+
+    $.validator.addMethod(
+        "phone",
+        function (value) {
+            return value.replace(/\D+/g, "").length >= 11;
+        },
+        "Введите номер телефона полностью"
+    );
+
+    $('[data-mask="phone"]').mask('+7 (999) 999-9999');
 });

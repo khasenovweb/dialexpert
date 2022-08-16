@@ -41,17 +41,17 @@
                 <div class="services__item">
                     <img src="img/services_1.svg" alt="" class="services__item__icon">
                     <div class="services__item__title">Бухгалтерская отчетность</div>
-                    <button class="btn services__item__btn">Подробнее</button>
+                    <button class="btn services__item__btn" data-modal-show="3">Подробнее</button>
                 </div>
                 <div class="services__item">
                     <img src="img/services_2.svg" alt="" class="services__item__icon">
                     <div class="services__item__title">Полное бухгалтерское сопровождение</div>
-                    <button class="btn services__item__btn">Подробнее</button>
+                    <button class="btn services__item__btn" data-modal-show="3">Подробнее</button>
                 </div>
                 <div class="services__item">
                     <img src="img/services_3.svg" alt="" class="services__item__icon">
                     <div class="services__item__title">Налоговые конультанты</div>
-                    <button class="btn services__item__btn">Подробнее</button>
+                    <button class="btn services__item__btn" data-modal-show="3">Подробнее</button>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                             Учредитель компании <br>
                             Ангел харнитель бизнеса
                         </div>
-                        <button class="btn">Подробнее</button>
+                        <button class="btn" data-modal-show="4">Подробнее</button>
                     </div>
                 </div>
                 <div class="command__item">
@@ -143,7 +143,7 @@
             <img src="img/optimization.png" alt="" class="optimization__img">
             <h2 class="sec__title center">Оптимизируем Вашу бухгалтерию </h2>
             <p class="sec__desc center">в первый месяц сотрудничества</p>
-            <button class="btn">Получить оптимизацию</button>
+            <button class="btn" data-modal-show="optimization">Получить оптимизацию</button>
         </div>
     </div>
 </section>
@@ -214,13 +214,13 @@
         <div class="calc__content">
             <h2 class="sec__title center">Калькулятор бухгалтерских услуг</h2>
             <div class="calc__main">
-                <div class="calc__left">
+                <div class="calc__left" data-calc>
                     <div class="calc__left__title">Бухгалтерское сопровождение</div>
                     <div class="calc__left__group">
                         <div class="calc__left__group__label">Форма организации</div>
                         <div class="calc__left__group__inputs">
                             <label for="ip" class="ckeckbox">
-                                <input type="radio" id="ip" name="form_organization">
+                                <input type="radio" id="ip" name="calc_form_organization" value="ИП" checked>
                                 <span class="box">
                                     <div class="box__circle">
                                         <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +231,7 @@
                                 </span>
                             </label>
                             <label for="ooo" class="ckeckbox">
-                                <input type="radio" id="ooo" name="form_organization">
+                                <input type="radio" id="ooo" name="calc_form_organization" value="ООО">
                                 <span class="box">
                                     <div class="box__circle">
                                         <svg width="11" height="9" viewBox="0 0 11 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,8 +250,11 @@
                                 <svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
                                 </svg>
-                                <select class="select" name="" id="">
-                                    <option value="">УСН “доходы”</option>
+                                <select class="select" name="calc_type_taxation" id="">
+                                    <option value="ОСН">ОСН</option>
+                                    <option value='УСН "доходы"'>УСН "доходы"</option>
+                                    <option value='УСН "доход минус расход"'>УСН "доход минус расход"</option>
+                                    <option value="ЕНВД">ЕНВД</option>
                                 </select>
                             </div>
                         </div>
@@ -261,8 +264,17 @@
                                 <svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
                                 </svg>
-                                <select class="select" name="" id="">
-                                    <option value="">0-10</option>
+                                <select class="select" name="calc_incoming_documents" id="">
+                                    <option value="0">0-10</option>
+                                    <option value="800">10-20</option>
+                                    <option value="1600">20-30</option>
+                                    <option value="2400">30-50</option>
+                                    <option value="3200">50-80</option>
+                                    <option value="4000">80-100</option>
+                                    <option value="5000">100-150</option>
+                                    <option value="6000">150-200</option>
+                                    <option value="7000">200-300</option>
+                                    <option value="8000">300-…</option>
                                 </select>
                             </div>
                         </div>
@@ -272,25 +284,34 @@
                                 <svg class="select__arrow" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3535 1.35348L12.6464 0.646371L6.99996 6.29282L1.35352 0.646372L0.646408 1.35348L6.99996 7.70703L13.3535 1.35348Z" fill="#333333"/>
                                 </svg>
-                                <select class="select" name="" id="">
-                                    <option value="">0-10</option>
+                                <select class="select" name="calc_implementation_documents" id="">
+                                    <option value="0">0-10</option>
+                                    <option value="800">10-20</option>
+                                    <option value="1600">20-30</option>
+                                    <option value="2400">30-50</option>
+                                    <option value="3200">50-80</option>
+                                    <option value="4000">80-100</option>
+                                    <option value="5000">100-150</option>
+                                    <option value="6000">150-200</option>
+                                    <option value="7000">200-300</option>
+                                    <option value="8000">300-…</option>
                                 </select>
                             </div>
                         </div>
                         <div class="calc__left__group">
                             <div class="calc__left__group__label">Число сотрудников в штате</div>
-                            <input type="number" min="0" placeholder="">
+                            <input name="calc_number_employees_staff" type="number" min="0" placeholder="" value="0">
                         </div>
                     </div>
                 </div>
                 <div class="calc__right">
-                    <div class="calc__right__price">1 000 ₽ </div>
+                    <div class="calc__right__price"><span data-calc-result>1 000</span> ₽ </div>
                     <div class="calc__right__form">
                         <div class="calc__right__form__title">Нужен индивидуальный расчет?</div>
                         <div class="calc__right__form__desc">Оставьте заявку прямо сейчас</div>
-                        <form action="">
+                        <form action="" data-validate='form_calc'>
                             <input type="text" placeholder="Ваше имя">
-                            <input type="tel" placeholder="+7 (___) ___-__-__">
+                            <input data-mask="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__">
                             <div class="formpolitics">
                                 <label for="politics" class="formpolitics__checkbox">
                                     <input type="checkbox" id="politics" checked>
@@ -334,7 +355,7 @@
                         <p>В 2021 году я лично провела больше 160 консультаций, и я понимаю, как важно клиенту найти своего специалиста, которому можно будет доверять.</p>
                         <p>Консультация не обязывает вас к дальнейшей покупке</p>
                     </div>
-                    <button class="btn">Получить консультацию</button>
+                    <button class="btn" data-modal-show="2">Получить консультацию</button>
                 </div>
             </div>
         </div>
