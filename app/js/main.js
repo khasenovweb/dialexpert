@@ -66,22 +66,29 @@ $(document).ready(function(){
         $('[data-modal="'+id+'"]').addClass('active');
         var scrollbar_width = get_scrollbar_width();
         $('body').css('padding-right', scrollbar_width+'px');
+        $('.headhesive').css('padding-right', scrollbar_width+'px');
         $('body').addClass('body_hidden');
     });
 
     $('[data-modal-close]').click(function(){
         var id = $(this).attr('data-modal-close');
         $('[data-modal="'+id+'"]').removeClass('active');
-        $('body').css('padding-right', '0');
-        $('body').removeClass('body_hidden');
+        setTimeout(function(){
+            $('body').css('padding-right', '0');
+            $('.headhesive').css('padding-right', '0');
+            $('body').removeClass('body_hidden');
+        },300);
     });
 
     $('[data-modal]').click(function(){
         var thisvar = $(this);
         if ($(event.target).closest(".modal").length) return;
         thisvar.removeClass('active');
-        $('body').css('padding-right', '0');
-        $('body').removeClass('body_hidden')
+        setTimeout(function(){
+            $('body').css('padding-right', '0');
+            $('.headhesive').css('padding-right', '0');
+            $('body').removeClass('body_hidden');
+        },300);
     });
 
 
