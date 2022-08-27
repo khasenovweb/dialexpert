@@ -20,33 +20,44 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.05);
     padding: 30rem 50rem;
-    &.turquoise {
-        .packages__item__title {
-            color: #27A891;
+    .packages__item__list__img {
+        path {
+            fill: @main;
         }
-        .packages__item__list__img {
-            path {
-                fill: #27A891;
+    }
+    &.turquoise {
+        &:hover {
+            .packages__item__title {
+                color: #27A891;
+            }
+            .packages__item__list__img {
+                path {
+                    fill: #27A891;
+                }
             }
         }
     }
     &.blue {
-        .packages__item__title {
-            color: #2F7DA8;
-        }
-        .packages__item__list__img {
-            path {
-                fill: #2F7DA8;
+        &:hover {
+            .packages__item__title {
+                color: #2F7DA8;
+            }
+            .packages__item__list__img {
+                path {
+                    fill: #2F7DA8;
+                }
             }
         }
     }
     &.green {
-        .packages__item__title {
-            color: #16A83B;
-        }
-        .packages__item__list__img {
-            path {
-                fill: #16A83B;
+        &:hover {
+            .packages__item__title {
+                color: #16A83B;
+            }
+            .packages__item__list__img {
+                path {
+                    fill: #16A83B;
+                }
             }
         }
     }
@@ -81,6 +92,19 @@
     top: 3rem;
 }
 
+.packages__item__img {
+    width: 100%;
+    padding-bottom: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: -50rem;
+    margin-right: -50rem;
+    margin-top: -30rem;
+    width: ~"calc(100% + 100rem)";
+    margin-bottom: 30rem;
+}
+
 
 @media screen and (max-width: 750px) {
     .packages {
@@ -95,4 +119,11 @@
     .packages__item {
         padding: 40rem;
     }
+    .packages__item__img {
+        margin-left: -40rem;
+        margin-right: -40rem;
+        margin-top: -40rem;
+        width: ~"calc(100% + 80rem)";
+    }
+    
 }
